@@ -143,6 +143,9 @@ This is the AngularJS coding style guide for using TypeScript which is used inte
           this.name = 'My Service';
       }
       
+      /**
+       * function description goes here.
+       */
       doStuff(...): Type {
           ...
           this.doStuffPrivate();
