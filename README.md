@@ -7,6 +7,7 @@ This is the AngularJS coding style guide for using TypeScript which is used inte
   - Controllers, services, directives are written in format of TypeScript class.
   - Do not use unnecessary `public` modifier which is default.
   - Use single TypeScript module for entire project in order to avoid `require` syntax and use angularJS module system
+  - 
 
 ### Dependency Injection
   - Define dependencies in the `static` property `$inject`.
@@ -51,6 +52,21 @@ This is the AngularJS coding style guide for using TypeScript which is used inte
   }
   ```
   
+### CallBack Function
+  - Use arrow function for callback function to resolve 'this' during compile time
+  - When callback function is provided via a class function, use [automatic class binding](http://stackoverflow.com/questions/20627138/typescript-this-scoping-issue-when-called-in-jquery-callback) technique
+  - 
+  
+  ```typescript
+  class MyService {
+      static $inject: string[] = [''];
+      
+      constructor() {
+      }
+      
+      callBackFn: type = (...) => {
+      }
+    ```
   
 ## Controller
   - Use UpperCamelCase with `Ctrl` suffix for naming controller class
